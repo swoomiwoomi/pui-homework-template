@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: https://swoomiwoomi.github.io/pui-homework-template
 
 Repository link: https://github.com/swoomiwoomi/pui-homework-template
