@@ -4,8 +4,8 @@
 
 
 .line {
-    width: 112px;
-    height: 47px;
-    border-bottom: 5px solid black;
+    border-top: 2px solid black; 
+    width: 100%;
     position: absolute;
+    top: 50%;
 }
