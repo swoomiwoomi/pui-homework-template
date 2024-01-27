@@ -2,6 +2,10 @@
     width: 400px;
 }
 
+header {
+    position: absolute;
+}
+
 .line {
     border-top: 2px solid black; 
     width: 100%;
