@@ -13,8 +13,10 @@
 body {
     margin: auto;
     text-align: center;
+    width: 400px
 }
 
 p1 {
     text-decoration: underline;
 }
+
