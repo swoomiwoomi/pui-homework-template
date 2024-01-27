@@ -6,6 +6,6 @@
 .line {
     border-top: 2px solid black; 
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 100%;
 }
