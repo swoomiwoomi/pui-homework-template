@@ -1,6 +1,6 @@
 .logo {
     width: 400px;
-
+    text-align: left;
 }
 
 .tabs {
@@ -10,7 +10,7 @@
 }
 
 
-main {
+body {
     margin: auto;
     text-align: center;
     width: 400px;
