@@ -1,26 +1,85 @@
 .logo {
     width: 400px;
-    margin: auto
     
 }
 
 .tabs {
     text-transform: capitalize;
-    font-weight: 300;
-    font-size: medium;
+    font-size: larger;
+    color:#000
 }
 
 
 main {
-    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
+
 }
 
 p1 {
     text-decoration: underline;
 }
 
-.products {
-    width: 100 px;
-    text-align: center;
+p2 {
+    text-decoration: underline;
+    font-weight: bold;
 }
+
+p3 {
+    font-weight: bold;
+}
+
+.border { 
+    border: 2px solid #000;
+    display: inline-block;
+}
+
+
+.checkout {
+    cursor: not-allowed; /* Change the cursor to indicate that it's not clickable */
+    background-color: #fff000; /* Change the background color */
+    border: 3px solid #000; /* Change the border color and thickness */
+    padding: 15px 20px; /* Adjust padding as needed */
+    color: #000; /* Change the text color */
+    font-weight: bold;
+    
+  }
+
+.addtocart {
+    cursor: not-allowed; /* Change the cursor to indicate that it's not clickable */
+    background-color: #fff000; /* Change the background color */
+    border: 3px solid #000; /* Change the border color and thickness */
+    padding: 9px 12px; /* Adjust padding as needed */
+    color: #000; /* Change the text color */
+    font-weight: bold;
+
+}
+
+.currentpage{
+  background-color: #fff000; 
+  font-weight: bold;
+  
+}
+
+.highlight-text:hover{
+  background-color: #fff000; 
+  font-weight: bold;
+}
+
+.highlight-text2:hover{
+    background-color: #fff000; 
+    font-weight: bold;
+    max-width: 400px;
+  }
+
+.product-container img {
+        display: block;
+        border: 1px solid #000;
+      }
+
+  
+
+
+
+
