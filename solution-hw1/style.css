@@ -1,6 +1,6 @@
 .logo {
     width: 400px;
-    
+
 }
 
 
@@ -9,5 +9,9 @@
     width: 100%;
     position: absolute;
     top: 100%;
+}
+
+.tabs {
+    text-align: center;
 }
 
