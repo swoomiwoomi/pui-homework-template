@@ -10,23 +10,54 @@
   </head>
   
   
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html">
-        <img src="../assets/logo/logo-01.svg" alt = "bunbunlogo">
-        </a>
-      </div>
-      <hr>
-    </header>
-
-  <main>
-    <div class="tabs">
-        <a href="solution-hw1/index.html">Products</a><br>
-        <a href="solution-hw1/cart.html">Cart</a>
+    <body>
+      <header>
+        <div class="logo">
+          <a href="index.html">
+          <img src="../assets/logo/logo-01.svg" alt = "bunbunlogo">
+          </a>
         </div>
-  </main>
+        <hr>
+      </header>
 
-  </body>
+      <main>
+        <div class="tabs">
+          <a href="index.html" class="currentpage">PRODUCTS</a><br>
+          <a href="cart.html" class="highlight-text">CART</a>
+            </div>
+      
+    
+      <p>Original Cinnamon Roll</p>
+      <img src="../assets/products/original-cinnamon-roll.jpg" width= "400" alt = "originalroll" class="border">
+      <br>
+      <p>Customize our delicious, hand-made cinnamon rolls to your liking!</p>
+      <p>Glazing:</p>
+      <label for="glazing">
+      <select name="glaze" id="glaze"> 
+          <option value="original">Keep original</option> 
+          <option value="sugar">Sugar Milk</option> 
+          <option value="vanilla">Vanilla Milk</option> 
+          <option value="double">Double Chocolate</option> 
+      </select>
+      </label>
+      <p>Pack Size:</p>
+      <label for="pack">
+      <select name="pack" id="pack"> 
+            <option value="1">1</option> 
+            <option value="3">3</option> 
+            <option value="6">6</option> 
+            <option value="12">12</option> 
+      </select>
+      </label>
+      <br>
+      <br>
+      <p3>$2.49</p3>        <button class="addtocart">Add To Cart</button>
+
+    </main>
+
+
+
+
+    </body>
 
 </html>
