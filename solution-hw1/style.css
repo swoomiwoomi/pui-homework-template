@@ -1,11 +1,15 @@
-.logo {
-    width: 300px;
-}
+header {
+    position: relative;
+  }
 
+.logo {
+    width: 400px;
+}
 
 .line {
     border-top: 2px solid black; 
     width: 100%;
     position: absolute;
     top: 100%;
+    transform: translateY(-50%);
 }
