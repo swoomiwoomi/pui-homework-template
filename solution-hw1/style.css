@@ -1,5 +1,6 @@
 .logo {
     width: 400px;
+    margin: auto
     
 }
 
@@ -11,7 +12,6 @@
 
 
 main {
-    text-align: center;
     width: 400px;
 }
 
