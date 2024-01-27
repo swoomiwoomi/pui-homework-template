@@ -13,10 +13,13 @@
 body {
     margin: auto;
     text-align: center;
-    width: 400px
+    width: 400px;
 }
 
 p1 {
     text-decoration: underline;
 }
 
+.products {
+    width: 400 px;
+}
