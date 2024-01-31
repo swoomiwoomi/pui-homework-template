@@ -1,0 +1,103 @@
+.logo {
+    width: 400px; /* adjusts the size of the logo */
+    
+}
+
+.tabs { /* fixes the style of the navigation tabs */
+    text-transform: capitalize;
+    font-size: larger;
+    color:#000;
+}
+
+
+main { /* aligns all of the main content to the center */
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+}
+
+/* three different paragraph styles: underlined, underlined and bold, and just bold. */
+
+p1 { 
+    text-decoration: underline;
+}
+
+p2 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+p3 {
+    font-weight: bold;
+}
+
+/* creates the border around all of the images */
+
+.border { 
+    border: 2px solid #000;
+    display: inline-block;
+}
+
+/* button for checkout */
+
+.checkout {
+    cursor: not-allowed; 
+    background-color: #fff000; 
+    border: 3px solid #000; 
+    padding: 15px 20px; 
+    color: #000; 
+    font-weight: bold;
+    
+}
+
+/* button for add to cart */
+.addtocart {
+    cursor: not-allowed; 
+    background-color: #fff000; 
+    border: 3px solid #000; 
+    padding: 9px 12px; 
+    color: #000; 
+    font-weight: bold;
+
+}
+
+/* tracker for the navigation tabs to highlight the name of whichever page the user is on */
+
+.currentpage{
+  background-color: #fff000; 
+  font-weight: bold;
+  
+}
+
+/* highlights the navigation text */
+
+.highlight-text:hover{
+  background-color: #fff000; 
+  font-weight: bold;
+}
+
+/*highlights the product and their details when hovered over */
+
+.highlight-text2:hover{
+    background-color: #fff000; 
+    font-weight: bold;
+
+}
+
+/* this fixes a random bug I was dealing with for the borders, will fix the next homework */
+
+.product-container img {
+        display: block;
+        border: 1px solid #000;
+        overflow-x: hidden;
+        width: fit-content;
+}
+
+
+
+  
+
+
+
+
