@@ -3,14 +3,10 @@
     
 }
 
-hr {
-    top
-}
-
 .tabs { /* fixes the style of the navigation tabs */
     text-transform: capitalize;
     font-size: larger;
-    color:#000
+    color:#000;
 }
 
 
