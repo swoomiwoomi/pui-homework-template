@@ -3,6 +3,10 @@
     
 }
 
+hr {
+    top
+}
+
 .tabs { /* fixes the style of the navigation tabs */
     text-transform: capitalize;
     font-size: larger;
@@ -93,6 +97,8 @@ p3 {
         overflow-x: hidden;
         width: fit-content;
 }
+
+
 
   
 
