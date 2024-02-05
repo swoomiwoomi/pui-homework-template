@@ -1,31 +1,62 @@
 header {
-    position: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .logo {
     width: 400px; /* adjusts the size of the logo */
-    position: relative;
-    
+    position: relative;  
 }
 
 
 .line {
-    flex: 1;
-    border-top: 3px solid black; /* Adjust line style as needed */
-    width: calc(100%-400px);
+    position: absolute; /* Position the line absolutely */
+    top: 10%; /* Move the line to the vertical center */
+    width: calc(100% - 400px); /* Set the width of the line dynamically */
+    border-top: 5px solid black;
+    margin: 0;
+    left: 430px; /* Start the line at the end of the logo */
 }
 
 .tabs { /* fixes the style of the navigation tabs */
     text-transform: capitalize;
     font-size: larger;
-    color:#000;
+    color: #000;
+    text-align: right;
+    top: 5%;
+    position: absolute;
+    right: 100px;
+}
+
+.cart-link {
+    margin-left: 40px; /* Add space between "PRODUCTS" and "CART" */
+}
+
+.slogan {
+    margin-left: 20px;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 285px); 
+    gap: 50px;
+    justify-content: center;
+    
+}
+
+.grid-item img {
+    max-height: 285px;
+    text-align: left;
 }
 
 
 main { /* aligns all of the main content to the center */
     margin-right: auto;
     margin-left: auto;
-    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -97,14 +128,6 @@ p3 {
 
 }
 
-/* this fixes a random bug I was dealing with for the borders, will fix the next homework */
-
-.product-container img {
-        display: block;
-        border: 1px solid #000;
-        overflow-x: hidden;
-        width: fit-content;
-}
 
 
 
