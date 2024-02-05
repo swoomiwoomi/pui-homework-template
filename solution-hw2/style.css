@@ -34,6 +34,21 @@ header {
     margin-left: 40px;
 }
 
+.cart-icon {
+    position: absolute;
+    top: -15px; /* Adjust as needed */
+    right: -25px; /* Adjust as needed */
+    width: 20px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+    background-color: red;
+    border-radius: 50% / 70%;
+    color: white;
+    font-size: 12px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .slogan {
     position: absolute;
     left: 32%;
