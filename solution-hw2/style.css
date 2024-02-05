@@ -1,8 +1,8 @@
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     font-family:Arial, Helvetica, sans-serif;
+    color: #000;
 }
 
 .logo {
@@ -12,15 +12,15 @@ header {
 
 
 .line {
-    position: absolute; /* Position the line absolutely */
-    top: 10%; /* Move the line to the vertical center */
-    width: calc(100% - 400px); /* Set the width of the line dynamically */
+    position: absolute; 
+    top: 10%; 
+    width: calc(100% - 400px); 
     border-top: 5px solid black;
     margin: 0;
-    left: 430px; /* Start the line at the end of the logo */
+    left: 430px; 
 }
 
-.tabs { /* fixes the style of the navigation tabs */
+.tabs { 
     text-transform: capitalize;
     font-size: larger;
     color: #000;
@@ -31,11 +31,15 @@ header {
 }
 
 .cart-link {
-    margin-left: 40px; /* Add space between "PRODUCTS" and "CART" */
+    margin-left: 40px;
 }
 
 .slogan {
-    margin-left: 20px;
+    position: absolute;
+    left: 32%;
+    transform: translateX(-50%);
+    bottom: 750px; 
+    font-size: larger;
 
 }
 
@@ -44,7 +48,7 @@ header {
     grid-template-columns: repeat(3, 285px); 
     gap: 50px;
     justify-content: center;
-    
+    margin-top: 50px;
 }
 
 .grid-item img {
@@ -64,15 +68,18 @@ main { /* aligns all of the main content to the center */
 
 p1 { 
     text-decoration: underline;
+    color: #000; 
 }
 
 p2 {
     text-decoration: underline;
     font-weight: bold;
+    color:#000
 }
 
 p3 {
     font-weight: bold;
+    color:#000
 }
 
 /* creates the border around all of the images */
