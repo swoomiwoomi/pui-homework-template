@@ -116,6 +116,19 @@ main { /* aligns all of the main content to the center */
     font-size: medium;
 }
 
+.grid-container3 {
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 2;
+    justify-content: center;
+}
+
+.grid-item3 img {
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+}
+
 /* three different paragraph styles: underlined, underlined and bold, and just bold. */
 
 p1 { 
