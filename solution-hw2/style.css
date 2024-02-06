@@ -79,6 +79,43 @@ main { /* aligns all of the main content to the center */
 
 }
 
+.product-detail img {
+    width: 600px;
+    height: 600px;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    gap: 20px;
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 100px;
+    font-size: smaller;
+}
+
+.wide-column {
+    flex: 2;
+}
+
+.narrow-column {
+    flex: 1;
+    font-size: large;
+    width: 300px;
+}
+
+#glaze {
+    width: 250px;
+    height: 40px;
+    font-size: medium;
+}
+
+#pack {
+    width: 250px;
+    height: 40px;
+    font-size: medium;
+}
+
 /* three different paragraph styles: underlined, underlined and bold, and just bold. */
 
 p1 { 
@@ -101,7 +138,7 @@ p3 {
 
 .border { 
     border: 2px solid #000;
-    display: inline-block;
+    
 }
 
 /* button for checkout */
