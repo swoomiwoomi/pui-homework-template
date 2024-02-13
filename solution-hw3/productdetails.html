@@ -44,19 +44,19 @@
               <br>
               <p>Glazing:</p>
                 <label for="glazing">
-                <div class="drop-down">
-                  <select name="glaze" id="glaze"> 
-                      <option value="original">Keep original</option> 
-                      <option value="sugar">Sugar Milk</option> 
-                      <option value="vanilla">Vanilla Milk</option> 
-                      <option value="double">Double Chocolate</option> 
-                  </select>
-                </div>
+                    <div class="drop-down">
+                        <select name="glaze" id="glazingOptions"> 
+                            <option value="Keep original">Keep original</option> 
+                            <option value="Sugar milk">Sugar Milk</option> 
+                            <option value="Vanilla milk">Vanilla Milk</option> 
+                            <option value="Double chocolate">Double Chocolate</option> 
+                        </select>
+                    </div>
                 </label>
         
               <p>Pack Size:</p>
               <label for="pack">
-              <select name="pack" id="pack"> 
+              <select name="pack" id="packSizeOptions"> 
                     <option value="1">1</option> 
                     <option value="3">3</option> 
                     <option value="6">6</option> 
@@ -71,7 +71,7 @@
               <br>
               <br>
               <br>
-              <span><p3>$2.49</p3></span>
+              <span id="price">$2.49</span>
               <span><button class="addtocart">Add To Cart</button></span>
             </div>
         </div>
@@ -79,7 +79,7 @@
       </main>
 
 
-
+      <script src="./js/random-element.js"></script>
 
     </body>
 
