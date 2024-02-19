@@ -71,6 +71,11 @@ header {
     text-align: left;
 }
 
+.grid-item:hover {
+    background-color: yellow;
+    width: fit-content;
+}
+
 
 main { /* aligns all of the main content to the center */
     margin-right: auto;
@@ -104,17 +109,19 @@ main { /* aligns all of the main content to the center */
     width: 300px;
 }
 
-#glaze {
-    width: 250px;
+#glazingOptions {
+    width: 300px;
     height: 40px;
-    font-size: medium;
+
 }
 
-#pack {
-    width: 250px;
+#packSizeOptions {
+    width: 300px;
     height: 40px;
-    font-size: medium;
 }
+
+
+
 
 .grid-container3 {
     display: grid;
@@ -125,48 +132,33 @@ main { /* aligns all of the main content to the center */
     position: relative;
 }
 
+
 .grid-item3-price {
     text-align: right;
     margin-top: 50px;
-    margin-left: 0px;
-    margin-right: 0px;
+    position: relative;
+    left: 20px;
 }
 
-.grid-item3-center {
-    margin-top: 20px;
-    margin-left: 100px;
+.total {
+    left: 810px;
+    position: relative;
+    margin-top: 40px;
 }
-
 .line-cart {
-    width: 690px;
+    width: 555px;
     border-top: 5px solid black;
     position: absolute; 
     top: 85%; 
     border-top: 5px solid black;
-    left: 520px; 
+    left: 590px; 
     position: absolute;
 }
 
-.button {
-    margin-top: 130px;
-    margin-left: 100px;
+.addtocart {
+    width: 200px;
+    border: 1px;
 }
-
-.checkout {
-    top: 100%; 
-    background-color: #fff000;
-    border: 2px solid #000;
-    padding: 15px 20px;
-    color: #000;
-    font-weight: bold; 
-    width: 130px;   
-}
-
-.total {
-    margin-left: 700px;
-    top: 110%;
-}
-
 
 
 /* three different paragraph styles: underlined, underlined and bold, and just bold. */
@@ -199,7 +191,7 @@ p3 {
 .checkout {
     position: absolute;
     top: 90%; 
-    right: 400px; 
+    right: 565px; 
     background-color: #fff000;
     border: 2px solid #000;
     padding: 15px 20px;
@@ -221,7 +213,7 @@ p3 {
 
 /* tracker for the navigation tabs to highlight the name of whichever page the user is on */
 
-.currentpage{
+.currentpage {
   background-color: #fff000; 
   font-weight: bold;
   
@@ -234,13 +226,8 @@ p3 {
   font-weight: bold;
 }
 
-/*highlights the product and their details when hovered over */
 
-.highlight-text2:hover{
-    background-color: #fff000; 
-    font-weight: bold;
 
-}
 
 
 
