@@ -16,7 +16,7 @@ const packSizeOptions = [
 function populateDropdown(dropdown, options) {
     for (let i = 0; i < dropdown.options.length; i++) {
         const option = dropdown.options[i];
-        const matchingOption = options.find(opt => opt.name === option.value);
+        const matchingOption = options.find(opt => opt.name === option.value.price);
         if (matchingOption) {
             option.dataset.price = matchingOption.price.toFixed(2);
         }
@@ -56,7 +56,6 @@ function updatePrice() {
 
     // Update the price field
     const priceField = document.getElementById("price");
-    priceField.textContent = `$${totalPrice.toFixed(2)}`;
 }
 
 
