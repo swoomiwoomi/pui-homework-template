@@ -43,7 +43,7 @@ header {
     background-color: red;
     border-radius: 50%;
     color: white;
-    font-size: 15px; 
+    font-size: 16px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,6 +208,7 @@ p3 {
     padding: 9px 12px; 
     color: #000; 
     font-weight: bold;
+    position: absolute;
 
 }
 
@@ -226,8 +227,7 @@ p3 {
   font-weight: bold;
 }
 
-
-
-
-
-
+#product-image {
+    width: 600px; /* Adjust width as needed */
+    height: 600px; /* Maintain aspect ratio */
+}
