@@ -28,90 +28,98 @@ const rolls = {
 function updateProductImage() {
     var rollType = getUrlParameter('roll');
     var imageFile = rolls[rollType].imageFile;
+
     document.getElementById('product-image').src = "../assets/products/" + imageFile;
 }
 
-// Function to retrieve URL parameters
 function getUrlParameter(name) {
-    name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    const queryString = window.location.search;
+
+    const params = new URLSearchParams(queryString);
+    const paramValue = params.get(name);
+
+    return paramValue ? paramValue : '';
 }
 
-// Call the function to update the product image when the page loads
 window.onload = function() {
     updateProductImage();
 };
 
 
-const cart = [];
+let cart = [];
 
-// Parse the URL parameter to get the current roll type
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');
 
-// Function to update DOM elements with roll information
-function updateRollDetails() {
-    // Get the roll information from the rolls dictionary
-    const rollInfo = rolls[rollType];
 
-    // Update the heading with the roll type
-    document.getElementById('roll-heading').innerText = rollType + ' Cinnamon Roll';
+const rollInfo = rolls[rollType];
+const rollName = rollType;
+const rollPrice = rollInfo.basePrice;
 
-    // Update the image source with the correct roll image path
-    document.getElementById('product-image').src = '../assets/products/' + rollInfo.imageFile;
-}
 
-// Function to calculate total price based on glazing and pack size selection
-function updateTotalPrice() {
-    // Get selected glazing and pack size options
-    const selectedGlazing = document.getElementById('glazingOptions').value;
-    
-    const selectedPackSize = document.getElementById('packSizeOptions').value;
+document.getElementById('roll-heading').innerText = rollName + ' Cinnamon Roll';
 
-    // Get the roll information from the rolls dictionary
-    const rollInfo = rolls[rollType];
+
+document.getElementById('total-price').innerText = rollPrice;
 
 
 
-    // Calculate total price based on base price, glazing, and pack size
-    const basePrice = rollInfo.basePrice;
+const glazing = document.getElementById('glazingOptions');
 
-    console.log(basePrice);
 
-    let glazingPrice = 0;
-    let packPrice = 0;
 
-    // Find the selected glazing option price
-    for (let i = 0; i < glazingOptions.length; i++) {
-        if (selectedGlazing === glazingOptions[i].name) {
-            glazingPrice = glazingOptions[i].price;
-            break;
-        }
-    }
-
-    // Find the selected pack size option price
-    for (let i = 0; i < packSizeOptions.length; i++) {
-        if (selectedPackSize === packSizeOptions[i].name) {
-            packPrice = packSizeOptions[i].price;
-            break;
-        }
-    }
-
-    // Calculate total price
-    const totalPrice = (basePrice + glazingPrice) * packPrice;
-
-    // Update the total price field
-    document.getElementById('total-price').textContent = `$${totalPrice.toFixed(2)}`;
-
-  
-}
-
-// Call updateRollDetails function to update DOM elements with roll information
-updateRollDetails();
-
-// Add event listeners to glazing and pack size dropdown menus to update total price
+const pack = document.getElementById('packSizeOptions')
 document.getElementById('glazingOptions').addEventListener('change', updateTotalPrice);
 document.getElementById('packSizeOptions').addEventListener('change', updateTotalPrice);
+
+function updateTotalPrice() {
+
+    const selectedGlazing = glazing.value;
+    const glazingObj = glazingOptions.find(option=>option.name === selectedGlazing);
+
+    const glazePrice = glazingObj.price;
+     
+    const packSize = document.getElementById('packSizeOptions').value;
+
+    console.log("packsize:", packSize);
+
+    const totalPrice = (rollPrice + glazePrice) * packSize;
+
+    console.log("total price:", totalPrice);
+
+    document.getElementById('total-price').innerText = totalPrice;
+   
+}
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
+function addToCart() {
+  
+    const rollType = document.getElementById('roll-heading').innerText;
+    const rollGlazing = document.getElementById('glazingOptions').value;
+    const packSize = parseInt(document.getElementById('packSizeOptions').value);
+    const basePrice = parseFloat(document.getElementById('total-price').innerText);
+
+
+    const newRoll = new Roll(rollType, rollGlazing, packSize, basePrice);
+
+    cart.push(newRoll);
+
+    console.log("Cart:", cart);
+}
+
+
+window.onload = function() {
+    updateProductImage();
+};
+
+
+document.querySelector('.addtocart').addEventListener('click', addToCart);
