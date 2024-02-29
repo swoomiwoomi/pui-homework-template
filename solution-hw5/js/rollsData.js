@@ -103,15 +103,17 @@ class Roll {
 
 function addToCart() {
   
-    const rollType = document.getElementById('roll-heading').innerText;
-    const rollGlazing = document.getElementById('glazingOptions').value;
-    const packSize = parseInt(document.getElementById('packSizeOptions').value);
-    const basePrice = parseFloat(document.getElementById('total-price').innerText);
+    const newRoll = new Roll("Original", "Sugar Milk", 1, 2.49);
+    cart.push(roll1);
 
+    const roll2 = new Roll("Walnut", "Vanilla Milk", 12, 39.90);
+    cart.push(roll2);
 
-    const newRoll = new Roll(rollType, rollGlazing, packSize, basePrice);
+    const roll3 = new Roll("Raisin", "Sugar Milk", 3, 8.97);
+    cart.push(roll3);
 
-    cart.push(newRoll);
+    const roll4 = new Roll("Apple", "Original", 3, 10.47);
+    cart.push(roll4);
 
     console.log("Cart:", cart);
 }
@@ -123,5 +125,6 @@ window.onload = function() {
 
 
 document.querySelector('.addtocart').addEventListener('click', addToCart);
+
 
 
