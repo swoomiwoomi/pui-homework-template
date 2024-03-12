@@ -123,9 +123,9 @@ main { /* aligns all of the main content to the center */
 
 
 .total {
-    left: 810px;
+    left: 740px;
     position: relative;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .line-cart {
     width: 620px;
@@ -177,7 +177,8 @@ p3 {
     padding: 15px 20px;
     color: #000;
     font-weight: bold; 
-    width: 130px;   
+    width: 130px; 
+    font-size: large; 
 }
 
 .remove {
@@ -189,6 +190,7 @@ p3 {
     margin-left: 495px;
     margin-right: 0px;
     font-size: medium;
+    margin-top: 10px;
 }
 
 /* button for add to cart */
