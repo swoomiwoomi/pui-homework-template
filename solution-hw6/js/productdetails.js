@@ -1,17 +1,5 @@
 
-
-
-class Roll {
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
-        this.type = rollType;
-        this.glazing = rollGlazing;
-        this.size = packSize;
-        this.basePrice = rolls[rollType].basePrice;
-        this.calculatedPrice = (((this.basePrice + glazingOptions.find(option => option.name === this.glazing).price) * packSizeOptions.find(option => option.name === this.size).price));
-        this.rollImage = '../assets/products/' + rolls[this.type]['imageFile'];
-    }
-}
-
+//reusing the same dictionary with the glazing names and prices
 const glazingOptions = [
     { name: "Keep original", price: 0.00 },
     { name: "Sugar milk", price: 0.00 },
@@ -19,6 +7,7 @@ const glazingOptions = [
     { name: "Double chocolate", price: 1.50 }
 ];
 
+//reusing the same dictionary with the pack sizes and prices
 const packSizeOptions = [
     { name: "1", price: 1 },
     { name: "3", price: 3 },
@@ -50,8 +39,22 @@ const rolls = {
     "Strawberry": {
         "basePrice": 3.99,
         "imageFile": "strawberry-cinnamon-roll.jpg"
-    }
+    }    
 };
+
+
+
+//given class with added variable that represents the calculated price
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+        this.calculatedPrice = (((this.basePrice + glazingOptions.find(option => option.name === this.glazing).price) * packSizeOptions.find(option => option.name === this.size).price));
+        this.rollImage = '../assets/products/' + rolls[this.type]['imageFile'];
+    }
+}
 
 //updates the image according to the roll
 
@@ -142,9 +145,32 @@ function addToCart() {
     const newRoll = new Roll(rollType, rollGlazing, packSize, rollPrice);
     cart.push(newRoll);
 
-    // Save the updated cart to local storage and print its contents
-    saveCart();
+
+
+     // Save the updated cart to local storage and print its contents
+     saveCart();
+
+     // Update the cart badge icon
+     updateCartBadge();
+ }
+
+
+ // Function to update the cart badge icon
+function updateCartBadge() {
+    const cartBadge = document.querySelector('.cart-icon');
+    const cartCount = cart.length; // Get the number of items in the cart
+    console.log("Cart count:", cartCount); // Log the cart count
+    cartBadge.textContent = cartCount; // Update the text content of the cart badge
 }
+ 
+ // Event listener for the "Remove" button in the cart
+ // This assumes that each cart item has a "remove" button with a class "remove"
+ document.querySelectorAll('.remove').forEach((button, index) => {
+     button.addEventListener('click', () => {
+         removeFromCart(index);
+     });
+ });
+
 
 // Event listener for the "Add to Cart" button
 const addToCartButton = document.querySelector(".addtocart");
