@@ -44,6 +44,7 @@ const rolls = {
 };
 
 
+
 //given class with added variable that represents the calculated price
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
@@ -116,36 +117,91 @@ function createCartItemElement(roll) {
     removeButton.addEventListener('click', () => {
         // Remove the cart item
         cartItem.remove();
+
+        // Find the index of the item in the cart array
+        const itemIndex = cart.indexOf(roll);
+
+    
         // Update total price
         totalPrice -= roll.calculatedPrice;
         total.textContent = "$" + totalPrice.toFixed(2);
     });
     imageContainer.appendChild(removeButton);
 
-    console.log(totalPrice);
-
     return cartItem;
 }
 
-// Main function to display items in the cart
+
+
+// Function to save the cart to local storage and print its contents
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    console.log("Cart in local storage:", cart);
+}
+
+function removeFromCart(index) {
+    // Retrieve the item to remove from the cart
+    const removedItem = cart[index];
+
+    // Remove the item at the specified index from the cart array
+    cart.splice(index, 1);
+
+    // Update total price by subtracting the removed item's price
+    totalPrice -= removedItem.calculatedPrice;
+
+    console.log(totalPrice);
+
+    // Save the updated cart to local storage and print its contents
+    saveCart();
+
+    // Re-display the updated cart
+    displayCart();
+
+    // Update the cart badge icon
+    updateCartBadge();
+}
 function displayCart() {
+    // Initialize total price to zero
+    totalPrice = 0;
+
     const cartContainer = document.querySelector('.cart-container');
 
     // Clear existing cart items
     cartContainer.innerHTML = '';
 
-    // Display each item in the cart
-    cart.forEach(roll => {
+    cart.forEach((roll, index) => {
         const cartItem = createCartItemElement(roll);
         cartContainer.appendChild(cartItem);
         totalPrice += roll.calculatedPrice;
+    
+        // Attach event listener to the "Remove" button for this item
+        const removeButton = cartItem.querySelector('.remove');
+        removeButton.addEventListener('click', (event) => {
+            // Stop event propagation to prevent multiple removals
+            event.stopPropagation();
+            console.log('Remove button clicked for index:', index);
+            removeFromCart(index);
+        });
+    
+        // Log the index assigned to each remove button
+        console.log('Remove button assigned to index:', index);
     });
 
     // Update total price
     total.textContent = "$" + totalPrice.toFixed(2);
-
-    console.log(totalPrice);
 }
 
 // Call the displayCart function to initially populate the cart
 displayCart();
+
+// Function to update the cart badge icon
+function updateCartBadge() {
+    const cartBadge = document.querySelector('.cart-icon');
+    const cartCount = cart.length; // Get the number of items in the cart
+    console.log(cartCount);
+    cartBadge.textContent = cartCount; // Update the text content of the cart badge
+}
+
+// Call the updateCartBadge function to initially populate the cart badge
+updateCartBadge();
+
