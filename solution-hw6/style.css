@@ -123,11 +123,14 @@ main { /* aligns all of the main content to the center */
 
 
 
-.total {
-    left: 740px;
-    position: relative;
-    margin-top: 20px;
+
+.checkout-price {
+    display: flex;
+    align-items: center;
+    margin-left: 740px;
+    
 }
+
 .line-cart {
     width: 620px;
     border-top: 5px solid black;
