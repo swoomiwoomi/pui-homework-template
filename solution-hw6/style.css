@@ -74,6 +74,7 @@ header {
 .grid-item:hover {
     background-color: yellow;
     width: fit-content;
+    font-weight: bold;
 }
 
 
