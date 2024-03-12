@@ -1,6 +1,4 @@
-// creating the empty cart
-let cart = [];
-
+let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
 //reusing the same dictionary with the glazing names and prices
 const glazingOptions = [
@@ -58,11 +56,6 @@ class Roll {
     }
 }
 
-// Create instances of the Roll class for each roll and push them to the cart array
-cart.push(new Roll("Original", "Sugar milk", "1", 2.49));
-cart.push(new Roll("Walnut", "Vanilla milk", "12", 3.49));
-cart.push(new Roll("Raisin", "Sugar milk", "3", 2.99));
-cart.push(new Roll("Apple", "Keep original", "3", 3.49));
 
 //printing the cart to make sure the instances are added
 console.log("Cart:", cart);
