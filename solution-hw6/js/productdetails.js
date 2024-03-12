@@ -162,6 +162,8 @@ function updateCartBadge() {
     console.log("Cart count:", cartCount); // Log the cart count
     cartBadge.textContent = cartCount; // Update the text content of the cart badge
 }
+
+updateCartBadge();
  
  // Event listener for the "Remove" button in the cart
  // This assumes that each cart item has a "remove" button with a class "remove"
