@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
 //reusing the same dictionary with the glazing names and prices
@@ -110,6 +112,8 @@ function createCartItemElement(roll) {
     itemPrice.textContent = "$" + roll.calculatedPrice.toFixed(2);
     priceContainer.appendChild(itemPrice);
 
+    
+
     // Remove button
     const removeButton = document.createElement('button');
     removeButton.classList.add('remove');
@@ -162,6 +166,16 @@ function removeFromCart(index) {
     // Update the cart badge icon
     updateCartBadge();
 }
+
+
+// Function to calculate total price
+function calculateTotalPrice() {
+    totalPrice = 0;
+    cart.forEach(roll => {
+        totalPrice += roll.calculatedPrice;
+    });
+}
+
 function displayCart() {
     // Initialize total price to zero
     totalPrice = 0;
@@ -181,6 +195,14 @@ function displayCart() {
         const cartItem = createCartItemElement(roll);
         cartContainer.appendChild(cartItem);
         totalPrice += roll.calculatedPrice;
+
+        // Update total price
+    const total = document.querySelector('.total-price');
+    if (total) {
+        total.textContent = "$" + totalPrice.toFixed(2);
+    } else {
+        console.error("Total price element not found.");
+    }
     
         // Attach event listener to the "Remove" button for this item
         const removeButton = cartItem.querySelector('.remove');
@@ -199,13 +221,6 @@ function displayCart() {
         console.log('Remove button assigned to index:', index);
     });
 
-    // Update total price
-    const total = document.querySelector('.total-price');
-    if (total) {
-        total.textContent = "$" + totalPrice.toFixed(2);
-    } else {
-        console.error("Total price element not found.");
-    }
 }
 
 // Call the displayCart function to initially populate the cart
@@ -222,3 +237,4 @@ function updateCartBadge() {
 // Call the updateCartBadge function to initially populate the cart badge
 updateCartBadge();
 
+});
