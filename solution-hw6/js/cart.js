@@ -139,6 +139,8 @@ function saveCart() {
     console.log("Cart in local storage:", cart);
 }
 
+
+
 function removeFromCart(index) {
     // Retrieve the item to remove from the cart
     const removedItem = cart[index];
@@ -166,6 +168,12 @@ function displayCart() {
 
     const cartContainer = document.querySelector('.cart-container');
 
+    // Check if cart container exists
+    if (!cartContainer) {
+        console.error("Cart container not found.");
+        return;
+    }
+
     // Clear existing cart items
     cartContainer.innerHTML = '';
 
@@ -176,19 +184,28 @@ function displayCart() {
     
         // Attach event listener to the "Remove" button for this item
         const removeButton = cartItem.querySelector('.remove');
-        removeButton.addEventListener('click', (event) => {
-            // Stop event propagation to prevent multiple removals
-            event.stopPropagation();
-            console.log('Remove button clicked for index:', index);
-            removeFromCart(index);
-        });
+        if (removeButton) {
+            removeButton.addEventListener('click', (event) => {
+                // Stop event propagation to prevent multiple removals
+                event.stopPropagation();
+                console.log('Remove button clicked for index:', index);
+                removeFromCart(index);
+            });
+        } else {
+            console.error("Remove button not found for item at index:", index);
+        }
     
         // Log the index assigned to each remove button
         console.log('Remove button assigned to index:', index);
     });
 
     // Update total price
-    total.textContent = "$" + totalPrice.toFixed(2);
+    const total = document.querySelector('.total-price');
+    if (total) {
+        total.textContent = "$" + totalPrice.toFixed(2);
+    } else {
+        console.error("Total price element not found.");
+    }
 }
 
 // Call the displayCart function to initially populate the cart
