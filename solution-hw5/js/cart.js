@@ -18,6 +18,34 @@ const packSizeOptions = [
     { name: "12", price: 10 }
 ];
 
+const rolls = {
+    "Original": {
+        "basePrice": 2.49,
+        "imageFile": "original-cinnamon-roll.jpg"
+    },
+    "Apple": {
+        "basePrice": 3.49,
+        "imageFile": "apple-cinnamon-roll.jpg"
+    },
+    "Raisin": {
+        "basePrice": 2.99,
+        "imageFile": "raisin-cinnamon-roll.jpg"
+    },
+    "Walnut": {
+        "basePrice": 3.49,
+        "imageFile": "walnut-cinnamon-roll.jpg"
+    },
+    "Double-Chocolate": {
+        "basePrice": 3.99,
+        "imageFile": "double-chocolate-cinnamon-roll.jpg"
+    },
+    "Strawberry": {
+        "basePrice": 3.99,
+        "imageFile": "strawberry-cinnamon-roll.jpg"
+    }    
+};
+
+
 //given class with added variable that represents the calculated price
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
@@ -26,6 +54,7 @@ class Roll {
         this.size = packSize;
         this.basePrice = basePrice;
         this.calculatedPrice = (((this.basePrice + glazingOptions.find(option => option.name === this.glazing).price) * packSizeOptions.find(option => option.name === this.size).price));
+        this.rollImage = '../assets/products/' + rolls[this.type]['imageFile'];
     }
 }
 
@@ -38,68 +67,92 @@ cart.push(new Roll("Apple", "Keep original", "3", 3.49));
 //printing the cart to make sure the instances are added
 console.log("Cart:", cart);
 
-// Function to calculate the total price of a roll
-function calculatePrice(roll) {
-    const glazingPrice = glazingOptions.find(option => option.name === roll.glazing)?.price || 0;
-    const packSizePrice = packSizeOptions.find(option => option.name === roll.size)?.price || 0;
-    return (roll.basePrice + glazingPrice) * packSizePrice;
+let totalPrice = 0;
+
+// Function to create a cart item element
+function createCartItemElement(roll) {
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+
+    // Image container
+    const imageContainer = document.createElement('div');
+    imageContainer.classList.add('cart-image-container');
+    cartItem.appendChild(imageContainer);
+
+    // Image
+    const image = document.createElement('img');
+    image.src = roll.rollImage;
+    image.alt = roll.type + ' Cinnamon Roll';
+    image.style.width = '200px'; // Set image width to 200px
+    imageContainer.appendChild(image);
+
+    // Information container
+    const infoContainer = document.createElement('div');
+    infoContainer.classList.add('cart-info-container');
+    cartItem.appendChild(infoContainer);
+
+    // Roll name
+    const rollName = document.createElement('p');
+    rollName.textContent = roll.type + ' Cinnamon Roll';
+    infoContainer.appendChild(rollName);
+
+    // Glazing type
+    const glazingType = document.createElement('p');
+    glazingType.textContent = "Glazing: " + roll.glazing;
+    infoContainer.appendChild(glazingType);
+
+    // Pack size
+    const packSize = document.createElement('p');
+    packSize.textContent = "Pack Size: " + roll.size;
+    infoContainer.appendChild(packSize);
+
+    // Price container
+    const priceContainer = document.createElement('div');
+    priceContainer.classList.add('cart-price-container');
+    cartItem.appendChild(priceContainer);
+
+    // Item price
+    const itemPrice = document.createElement('p');
+    itemPrice.textContent = "$" + roll.calculatedPrice.toFixed(2);
+    priceContainer.appendChild(itemPrice);
+
+    // Remove button
+    const removeButton = document.createElement('button');
+    removeButton.classList.add('remove');
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener('click', () => {
+        // Remove the cart item
+        cartItem.remove();
+        // Update total price
+        totalPrice -= roll.calculatedPrice;
+        total.textContent = "$" + totalPrice.toFixed(2);
+    });
+    imageContainer.appendChild(removeButton);
+
+    console.log(totalPrice);
+
+    return cartItem;
 }
 
-// Function to display the cart contents
+// Main function to display items in the cart
 function displayCart() {
-    const cartContainer = document.querySelector('.cart');
-    cartContainer.innerHTML = ''; // Clear previous contents
+    const cartContainer = document.querySelector('.cart-container');
 
+    // Clear existing cart items
+    cartContainer.innerHTML = '';
+
+    // Display each item in the cart
     cart.forEach(roll => {
-        // Create the main container for the cart item
-        const itemDiv = document.createElement('div');
-        itemDiv.classList.add('cart-item');
-
-        // Create and append the image element
-        const img = document.createElement('img');
-        img.src = "../assets/products/" + rolls[roll.type].imageFile;
-        img.width = 200;
-        img.alt = roll.type;
-        img.classList.add('border');
-        itemDiv.appendChild(img);
-
-        // Create and append the roll information
-        const infoDiv = document.createElement('div');
-        infoDiv.classList.add('grid-item3');
-        infoDiv.innerHTML = `
-            <p>${roll.type} Cinnamon Roll</p>
-            <p>Glazing: ${roll.glazing}</p>
-            <p>Pack Size: ${roll.size}</p>
-        `;
-        itemDiv.appendChild(infoDiv);
-
-        // Create and append the price element
-        const priceDiv = document.createElement('div');
-        priceDiv.classList.add('grid-item3-price');
-        const priceParagraph = document.createElement('p');
-        priceParagraph.textContent = '$' + calculatePrice(roll).toFixed(2);
-        priceDiv.appendChild(priceParagraph);
-        itemDiv.appendChild(priceDiv);
-
-        // Create and append the remove button
-        const removeButton = document.createElement('p');
-        removeButton.classList.add('remove-item');
-        removeButton.dataset.type = roll.type;
-        removeButton.textContent = 'Remove';
-        itemDiv.appendChild(removeButton);
-
-        // Append the cart item container to the cart container
-        cartContainer.appendChild(itemDiv);
+        const cartItem = createCartItemElement(roll);
+        cartContainer.appendChild(cartItem);
+        totalPrice += roll.calculatedPrice;
     });
 
-    updateTotalPrice();
+    // Update total price
+    total.textContent = "$" + totalPrice.toFixed(2);
+
+    console.log(totalPrice);
 }
 
-// Event listener for removing items from the cart
-document.querySelector('.cart').addEventListener('click', function(event) {
-    if (event.target.classList.contains('remove-item')) {
-        const typeToRemove = event.target.dataset.type;
-        cart = cart.filter(roll => roll.type !== typeToRemove);
-        displayCart();
-    }
-});
+// Call the displayCart function to initially populate the cart
+displayCart();
