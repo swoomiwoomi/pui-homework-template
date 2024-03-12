@@ -89,6 +89,8 @@ const rollType = params.get('roll');
 
 const rollInfo = rolls[rollType];
 const rollName = rollType;
+console.log("rollType:", rollType);
+console.log("rollInfo:", rolls[rollType]);
 const rollPrice = rollInfo.basePrice;
 
 
