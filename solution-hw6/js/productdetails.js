@@ -1,4 +1,3 @@
-
 //reusing the same dictionary with the glazing names and prices
 const glazingOptions = [
     { name: "Keep original", price: 0.00 },
@@ -127,48 +126,46 @@ function updateTotalPrice() {
     document.getElementById('total-price').innerText = "$" + totalPrice.toFixed(2); // Display as currency
 }
 
-// Attempt to retrieve the cart from local storage when the page loads
+// get cart from local storage
 let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
-// Function to save the cart to local storage and print its contents
+// save cart to local storage and print cart
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
     console.log("Cart in local storage:", cart);
 }
 
-// Function to handle "Add to Cart" button click
+// add to cart function
 function addToCart() {
     const rollType = rollName;
     const rollGlazing = document.getElementById('glazingOptions').value;
     const packSize = document.getElementById('packSizeOptions').value;
     const rollPrice = parseFloat(document.getElementById('total-price').innerText.substring(1)); // Remove '$' and parse as float
 
-    // Create a new Roll instance and add it to the cart
+    // create a new roll and add to cart
     const newRoll = new Roll(rollType, rollGlazing, packSize, rollPrice);
     cart.push(newRoll);
 
 
 
-     // Save the updated cart to local storage and print its contents
+     // save cart to local storage 
      saveCart();
 
-     // Update the cart badge icon
-     updateCartBadge();
+     // update cart icon
+     updateCartIcon();
  }
 
 
- // Function to update the cart badge icon
-function updateCartBadge() {
-    const cartBadge = document.querySelector('.cart-icon');
+ // update cart icon function
+function updateCartIcon() {
+    const cartIcon = document.querySelector('.cart-icon');
     const cartCount = cart.length; // Get the number of items in the cart
-    console.log("Cart count:", cartCount); // Log the cart count
-    cartBadge.textContent = cartCount; // Update the text content of the cart badge
+    cartIcon.textContent = cartCount; // Update the text content of the cart icon
 }
 
-updateCartBadge();
+updateCartIcon();
  
- // Event listener for the "Remove" button in the cart
- // This assumes that each cart item has a "remove" button with a class "remove"
+ // event listener for remove button
  document.querySelectorAll('.remove').forEach((button, index) => {
      button.addEventListener('click', () => {
          removeFromCart(index);
@@ -176,13 +173,11 @@ updateCartBadge();
  });
 
 
-// Event listener for the "Add to Cart" button
+// event listener for add to cart button
 const addToCartButton = document.querySelector(".addtocart");
 addToCartButton.addEventListener("click", addToCart);
 
-// Populate the DOM with initial roll information
-// (Update this part according to your HTML structure and how roll information is displayed)
-// Example: Update product image, roll name, price, etc.
+// update DOM
 updateProductImage();
 document.getElementById('roll-heading').innerText = rollName + ' Cinnamon Roll';
 document.getElementById('total-price').innerText = "$" + rollPrice.toFixed(2);
