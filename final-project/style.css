@@ -1,0 +1,148 @@
+
+
+Header .Header {
+    font-size: 60px;
+    padding-top: 30px;
+    text-align: center;
+    font-family: "vortice-concept", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    padding-left: 40px;
+}
+
+.Header a{
+    font-family: "vortice-concept", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #000;
+}
+
+.NavBar {
+    padding-left: 80%;
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+    color: #000;
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+    margin-top: -80px;
+
+}
+
+.ToDo {
+    padding-right: 0px;
+}
+
+.Pomodoro {
+    padding-right: 70px;
+}
+
+#textBoxContainer {
+    position: relative;
+}
+
+.TaskInputQuestion {
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 100px;
+
+
+}
+
+.TaskInput {
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-radius: 30px;
+  }
+  
+  [id*="user-input"] {
+    flex: 1;
+    padding: 4px;
+    margin-right: 100px;
+    border: none;
+    border-radius: 5px;
+    resize: none; 
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    width: 500px;
+    height: 30px;
+    align-items: center;
+    border-radius: 30px;
+  }
+  
+  .empty-line {
+    height: 30px; /* Adjust this value to increase or decrease the space between divs */
+  }
+
+  .addMore {
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+    bottom: 10px; /* Adjust this value to position the button vertically */
+    left: 50%; /* Aligns the button horizontally to the center */
+    display: block;
+    margin: 20px auto; /* Centers the buttons horizontally */
+  }
+
+  #send-button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #d6ebf2;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    align-items: center;
+    display: block;
+    margin: 20px auto; /* Centers the buttons horizontally */
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  #send-button:hover {
+    background-color: #689dd6;
+  }
+
+  #textBoxInputs {
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    
+  }
+
+    /* CSS for styling the checkboxes */
+    .task {
+        margin-bottom: 10px; /* Add spacing between tasks */
+    }
+
+    /* Style for the checkbox input */
+    .task-checkbox {
+        margin-right: 10px; /* Add spacing between checkbox and label */
+
+    }
+
+    /* Style for the label associated with the checkbox */
+    .task label {
+        font-size: 16px; /* Adjust font size */
+        display: inline-block; /* Ensure label and checkbox are displayed inline */
+        vertical-align: middle; /* Align label vertically with checkbox */
+    }
