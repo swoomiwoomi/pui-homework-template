@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>PomoTodo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/mxz7tvw.css">
+  <link rel="stylesheet" href="https://use.typekit.net/mxz7tvw.css">
+
+  <head>
+  <title>Product Gallery</title>
+  </head>
+  
+    <body>
+      <header>
+         <div class="Header">
+            <a href="home.html">Pomotodo</a>
+        </div>
+
+        <div class="NavBar">
+            <div class="ToDo">
+                <a href ="tasktime.html"><h1>to-do</h1></a>
+            </div>
+            <div class="Pomodoro">
+                <a href ="timer.html"><h1>pomodoro</h1></a>
+            </div>
+          </div>
+      </header>
+
+      <main>
+        <div class="TaskInputQuestion">
+            <p>What tasks do you have to complete today?</p>
+        </div>
+
+        <div id="textBoxContainer">
+            <div class="TaskInput">
+                <textarea id="user-input" placeholder="Ex. finish coding this website..."></textarea>
+            </div>
+
+            <div class="empty-line"></div>
+
+            <div class="TaskInput">
+                <textarea id="user-input1" placeholder=""></textarea>
+            </div>
+
+            <div class="empty-line"></div>
+
+            <div class="TaskInput">
+                <textarea id="user-input2" placeholder=""></textarea>
+            </div>
+        </div>
+        
+        <button class="addMore" onclick="addTextBox()">
+            <p>+ add more</p>
+        </button>
+        
+    
+            
+        <button id="send-button">Done</button>  
+      </main>
+
+      <script src="script.js"></script>
+    </body> 
+
+</html>
