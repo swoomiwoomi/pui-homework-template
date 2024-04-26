@@ -111,3 +111,73 @@ function addTextBox() {
         alert("Seems like too much of a load for you today :(");
     }
 }
+
+$(document).ready(function() {
+    var timerInterval;
+    var minutes = 25; // Initial minutes
+    var seconds = 0;
+  
+    function startTimer() {
+      timerInterval = setInterval(updateTimer, 1000);
+    }
+  
+    function pauseTimer() {
+      clearInterval(timerInterval);
+    }
+  
+    function resetTimer(duration) {
+      clearInterval(timerInterval);
+      minutes = duration; // Set initial minutes
+      seconds = 0;
+      updateDisplay();
+    }
+  
+    function updateTimer() {
+      if (seconds > 0) {
+        seconds--;
+      } else {
+        if (minutes > 0) {
+          minutes--;
+          seconds = 59;
+        } else {
+          clearInterval(timerInterval);
+          // Timer reaches 00:00
+          // You can add additional actions here
+        }
+      }
+      updateDisplay();
+    }
+  
+    function updateDisplay() {
+      var formattedTime = pad(minutes) + ":" + pad(seconds);
+      $("#timer").text(formattedTime);
+    }
+  
+    function pad(num) {
+      return num < 10 ? "0" + num : num;
+    }
+  
+    $("#start").click(function() {
+      startTimer();
+    });
+  
+    $("#pause").click(function() {
+      pauseTimer();
+    });
+  
+    $("#work").click(function() {
+      resetTimer(25); // Start at 25 minutes for work time
+    });
+  
+    $("#longBreak").click(function() {
+      resetTimer(10); // Start at 10 minutes for long break
+    });
+  
+    $("#shortBreak").click(function() {
+      resetTimer(5); // Start at 5 minutes for short break
+    });
+  
+    // Initial display
+    updateDisplay();
+  });
+  
