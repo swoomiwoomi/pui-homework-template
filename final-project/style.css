@@ -8,14 +8,14 @@ Header .Header {
     font-weight: 400;
     font-style: normal;
     display: flex;
-    padding-left: 40px;
+   padding-left: 30px;
     
 }
 
-Header .Header img {
+.Header img {
   width: 100px;
-  margin-top: 0;
-  padding-top: 0;
+  margin-top: -10px; /* Adjust the margin to move the image up */
+  padding-top: 0; /* You can remove padding-top if it's not needed */
 }
 
 p {
@@ -34,6 +34,8 @@ p {
     font-style: normal;
     text-decoration: none;
     color: #000;
+    padding-left: 20px;
+    padding-top: 5px;
 }
 
 .NavBar {
@@ -266,4 +268,33 @@ p {
       margin-top: 0;
     }
 
-    
+    .taskTimeContainer {
+      display: flex; /* Use flexbox for layout */
+      margin: 30px;
+    }
+  
+  .TaskInputQuestion {
+      flex: 1; /* Take up remaining space */
+  }
+
+  #videoContainer {
+    position: relative;
+    width: auto; /* Adjust the width as needed */
+    height: auto;
+    padding-right: 500px;
+
+  }
+  
+  #videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 560 ;
+    height: 315;
+  }
+
+  #videoContainer p {
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure the text appears above the iframe */
+  }
