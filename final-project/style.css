@@ -1,5 +1,62 @@
+/* Default styles (for desktop) */
+/* Add your existing CSS styles here */
 
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+  /* Apply styles specific to mobile devices */
 
+  /* Adjust font sizes and padding for smaller screens */
+  html, body {
+    font-size: 14px; /* Adjust as needed */
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Center header elements */
+  .Header {
+    text-align: center;
+  }
+
+  /* Make logo smaller on smaller screens */
+  #tomatologo {
+    width: 80px; /* Adjust as needed */
+  }
+
+  /* Make navigation items display vertically on smaller screens */
+  .NavBar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Center navigation items */
+  .ToDo, .Pomodoro {
+    text-align: center;
+  }
+
+  /* Center task input question */
+  .TaskInputQuestion {
+    text-align: center;
+  }
+
+  /* Adjust spacing between task inputs */
+  .TaskInput {
+    margin-bottom: 10px;
+  }
+
+  /* Center add more button */
+  .addMore {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Center send button */
+  #send-button {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+/* Add your existing CSS styles here */
 Header .Header {
     font-size: 60px;
     padding-top: 60px;
@@ -38,8 +95,13 @@ p {
     padding-top: 5px;
 }
 
+.Header a:hover {
+  color: black; /* Change text color to blue on hover */
+  text-decoration: none;
+}
+
 .NavBar {
-    padding-left: 80%;
+    padding-left: 75%;
     font-family: "josefin-sans", sans-serif;
     font-weight: 50;
     font-style: normal;
@@ -51,6 +113,16 @@ p {
     margin-top: -80px;
 
 }
+
+.NavBar a:hover {
+  color: black;
+}
+
+.NavBar a {
+  color:#000;
+}
+
+
 
 .ToDo {
     padding-right: 0px;
@@ -79,7 +151,7 @@ p {
 .TaskInput {
     align-items: center;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 5px;
     width: 500px;
     height: 30px;
@@ -90,19 +162,23 @@ p {
   
   [id*="user-input"] {
     flex: 1;
-    padding: 4px;
-    margin-right: 100px;
     border: none;
     border-radius: 5px;
     resize: none; 
     font-family: "josefin-sans", sans-serif;
     font-weight: 300;
     font-style: normal;
-    width: 500px;
-    height: 30px;
-    align-items: center;
     border-radius: 30px;
     font-size: medium;
+    padding: 10px;
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-left: -10px;
+    margin-top: -10px;
+
   }
   
   .empty-line {
