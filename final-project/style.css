@@ -67,6 +67,12 @@
     display: block;
     margin: 20px auto;
   }
+
+  .pomodoroWrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
 }
 
 /* Add your existing CSS styles here */
