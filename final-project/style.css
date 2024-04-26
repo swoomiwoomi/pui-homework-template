@@ -2,13 +2,20 @@
 
 Header .Header {
     font-size: 60px;
-    padding-top: 30px;
+    padding-top: 60px;
     text-align: center;
     font-family: "vortice-concept", sans-serif;
     font-weight: 400;
     font-style: normal;
     display: flex;
     padding-left: 40px;
+    
+}
+
+Header .Header img {
+  width: 100px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 p {
@@ -93,6 +100,7 @@ p {
     height: 30px;
     align-items: center;
     border-radius: 30px;
+    font-size: medium;
   }
   
   .empty-line {
@@ -136,8 +144,14 @@ p {
     font-family: "josefin-sans", sans-serif;
     font-weight: 600;
     font-style: normal;
-    text-align: center;
+    text-align: left;
+    font-size: medium;
     
+  }
+
+  #textBoxInputs > div {
+    display:list-item; /* Display the divs inline */
+    text-align: center; /* Align the text to the left within each div */
   }
 
     /* CSS for styling the checkboxes */
@@ -189,7 +203,7 @@ p {
       width: 600px; /* Set the width of each container */
       height: 300px; /* Set the height of each container */
       vertical-align: top; /* Align containers at the top */
-      margin-right: 50px; /* Add margin between containers */
+      margin-right: 100px; /* Add margin between containers */
       padding-top: 60px;
       padding-left: 30px;
 
@@ -206,6 +220,9 @@ p {
       padding-top: 100px;
     }
 
+    .pomodoroInfo {
+      margin-left: 50px;
+    }
    
     
     .pomodoroWrapper {
@@ -248,3 +265,5 @@ p {
       margin-left: 100px;
       margin-top: 0;
     }
+
+    
