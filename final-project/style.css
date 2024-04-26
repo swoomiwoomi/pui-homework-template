@@ -2,40 +2,53 @@
 /* Add your existing CSS styles here */
 
 /* Media query for mobile devices */
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   /* Apply styles specific to mobile devices */
 
   /* Adjust font sizes and padding for smaller screens */
-  html, body {
-    font-size: 14px; /* Adjust as needed */
-    padding: 0;
-    margin: 0;
-  }
 
   /* Center header elements */
-  .Header {
-    text-align: center;
+  .Header a{
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .Header img {
+    width: 100px;
+    margin-top: -10px; /* Adjust the margin to move the image up */
+    padding-top: 0; /* You can remove padding-top if it's not needed */
   }
 
   /* Make logo smaller on smaller screens */
   #tomatologo {
-    width: 80px; /* Adjust as needed */
+    max-width: 40px; /* Adjust as needed */
+    height: 40px;
   }
 
   /* Make navigation items display vertically on smaller screens */
   .NavBar {
-    display: flex;
+    font-size: 10px;
+    text-align: left;
     flex-direction: column;
+  }
+
+  .ToDo a{
+    font-size: 10px;
   }
 
   /* Center navigation items */
   .ToDo, .Pomodoro {
     text-align: center;
+    
+
   }
+
+
 
   /* Center task input question */
   .TaskInputQuestion {
-    text-align: center;
+    font-size: 14px;
+
   }
 
   /* Adjust spacing between task inputs */
@@ -151,10 +164,10 @@ p {
 .TaskInput {
     align-items: center;
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #aaa;
     border-radius: 5px;
-    width: 500px;
-    height: 30px;
+    width: 510px;
+    height: 35px;
     margin: 0 auto;
     padding-bottom: 10px;
     border-radius: 30px;
@@ -170,11 +183,10 @@ p {
     font-style: normal;
     border-radius: 30px;
     font-size: medium;
-    padding: 10px;
-    width: 500px;
-    height: 30px;
+    padding: 0px;
+    width: 508px;
+    height: 33px;
     margin: 0 auto;
-    padding-bottom: 10px;
     border-radius: 30px;
     margin-left: -10px;
     margin-top: -10px;
