@@ -125,7 +125,7 @@ p {
   #send-button {
     padding: 8px 15px;
     border: none;
-    background-color: #d6ebf2;
+    background-color: #fff7ec;
     color: #000;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -136,6 +136,7 @@ p {
     font-family: "josefin-sans", sans-serif;
     font-weight: 600;
     font-style: normal;
+    border: 1px solid #000;
   }
   
   #send-button:hover {
@@ -148,12 +149,9 @@ p {
     font-style: normal;
     text-align: left;
     font-size: medium;
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 50px;
     
-  }
-
-  #textBoxInputs > div {
-    display:list-item; /* Display the divs inline */
-    text-align: center; /* Align the text to the left within each div */
   }
 
     /* CSS for styling the checkboxes */
@@ -245,7 +243,7 @@ p {
     }
 
     #work, #longBreak, #shortBreak, #start, #pause {
-      background-color: beige;
+      background-color: #fff7ec;
       border: black;
       font-family: "josefin-sans", sans-serif;
       font-weight: 700;
@@ -269,19 +267,24 @@ p {
     }
 
     .taskTimeContainer {
-      display: flex; /* Use flexbox for layout */
-      margin: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
   
   .TaskInputQuestion {
-      flex: 1; /* Take up remaining space */
+      justify-content: center;
+      text-align: center;
+      display: flex;
+      margin: 0;
   }
 
   #videoContainer {
     position: relative;
     width: auto; /* Adjust the width as needed */
     height: auto;
-    padding-right: 500px;
 
   }
   
@@ -291,10 +294,4 @@ p {
     left: 0;
     width: 560 ;
     height: 315;
-  }
-
-  #videoContainer p {
-    top: 0;
-    left: 0;
-    z-index: 1; /* Ensure the text appears above the iframe */
   }
