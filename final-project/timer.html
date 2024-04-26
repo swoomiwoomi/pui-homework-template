@@ -8,6 +8,7 @@
 
   <head>
   <title>Product Gallery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   
     <body>
@@ -27,7 +28,42 @@
       </header>
 
       <main>
-       
+        <div class="pomodoroWrapper">
+          <div class="pomodoroInfo">
+            <div class="textContainer">
+              <p>The Pomodoro method was developed in the late 1980s by university student Francesco Cirillo. He was
+                struggling to complete his studying and assignments and decided to break down his work into smaller chunks. Thus, the pomodoro method
+                was born. This method is completely customizable!
+              </p>
+              <div class="tomatoBook">
+                <img src="images/pomodorotechnique.jpg" alt="Pomodoro Technique">
+                <div class="bookArrow">
+                  <img src="images/redarrow.png" alt="Red Arrow">
+                  <p>Check out this book if you're interested!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pomodoroTimer">
+            <div class="timerLengths">
+              <button id="work">Work Time</button>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <button id="longBreak">Long Break</button>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <button id="shortBreak">Short Break</button>
+            </div>
+            <div class="timer" id="timer">25:00</div>
+            <div class="timerButtons">
+              <button id="start">Start</button>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <button id="pause">Pause</button>
+            </div>
+          </div>
+        </div>
+
+      
+
+
       </main>
 
       <script src="script.js"></script>
