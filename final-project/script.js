@@ -142,6 +142,9 @@ $(document).ready(function() {
         } else {
           clearInterval(timerInterval);
           // Timer reaches 00:00
+          // Play notification sound
+          var audio = document.getElementById("notificationSound");
+          audio.play();
           // You can add additional actions here
         }
       }
@@ -180,4 +183,3 @@ $(document).ready(function() {
     // Initial display
     updateDisplay();
   });
-  
