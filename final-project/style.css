@@ -1,79 +1,4 @@
-/* Default styles (for desktop) */
-/* Add your existing CSS styles here */
 
-/* Media query for mobile devices */
-@media only screen and (max-width: 767px) {
-  /* Apply styles specific to mobile devices */
-
-  /* Adjust font sizes and padding for smaller screens */
-
-  /* Center header elements */
-  .Header a{
-    font-size: 20px;
-    margin-left: 0;
-  }
-
-  .Header img {
-    width: 100px;
-    margin-top: -10px; /* Adjust the margin to move the image up */
-    padding-top: 0; /* You can remove padding-top if it's not needed */
-  }
-
-  /* Make logo smaller on smaller screens */
-  #tomatologo {
-    max-width: 40px; /* Adjust as needed */
-    height: 40px;
-  }
-
-  /* Make navigation items display vertically on smaller screens */
-  .NavBar {
-    font-size: 10px;
-    text-align: left;
-    flex-direction: column;
-  }
-
-  .ToDo a{
-    font-size: 10px;
-  }
-
-  /* Center navigation items */
-  .ToDo, .Pomodoro {
-    text-align: center;
-    
-
-  }
-
-
-
-  /* Center task input question */
-  .TaskInputQuestion {
-    font-size: 14px;
-
-  }
-
-  /* Adjust spacing between task inputs */
-  .TaskInput {
-    margin-bottom: 10px;
-  }
-
-  /* Center add more button */
-  .addMore {
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* Center send button */
-  #send-button {
-    display: block;
-    margin: 20px auto;
-  }
-
-  .pomodoroWrapper {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 50px;
-  }
-}
 
 /* Add your existing CSS styles here */
 Header .Header {
@@ -125,7 +50,7 @@ p {
     font-weight: 50;
     font-style: normal;
     color: #000;
-    font-size: small;
+    font-size: 10em;
     display: flex;
     justify-content: space-between;
     text-decoration: underline;
@@ -389,3 +314,38 @@ p {
     width: 560 ;
     height: 315;
   }
+
+/* Responsive Styles for 390x844 */
+@media (max-width: 390px) {
+  /* Adjustments for smaller screens */
+  Header .Header {
+    font-size: 30px;
+    
+}
+
+
+  .NavBar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+  }
+
+  
+  
+  .Header img {
+      width: 60px;
+  }
+
+  .TaskInputQuestion {
+    font-size: 18px;
+  }
+
+  
+ 
+  /* Add more responsive adjustments here */
+}
+
+@media (max-height: 844px) {
+  /* Adjustments for screens with height <= 844px */
+  /* You can add specific adjustments for this height if needed */
+}
