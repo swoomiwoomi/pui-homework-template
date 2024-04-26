@@ -11,6 +11,16 @@ Header .Header {
     padding-left: 40px;
 }
 
+p {
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 300;
+    font-size: medium;
+    font-style: normal;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+
 .Header a{
     font-family: "vortice-concept", sans-serif;
     font-weight: 400;
@@ -145,4 +155,91 @@ Header .Header {
         font-size: 16px; /* Adjust font size */
         display: inline-block; /* Ensure label and checkbox are displayed inline */
         vertical-align: middle; /* Align label vertically with checkbox */
+    }
+
+    .timer {
+      font-size: 17em;
+      font-family: "josefin-sans", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .tomatoBook img {
+      width: 160px;
+      height: auto;
+      padding-bottom: 0px;
+    }
+
+    .tomatoBook p {
+
+      margin: -50px; /* Remove default margin of the paragraph */
+    }
+
+    .textContainer {
+      width: 600px;
+      text-align: center;
+    }
+
+    .pomodoroInfo, .pomodoroTimer {
+      width: 600px; /* Set the width of each container */
+      height: 300px; /* Set the height of each container */
+      vertical-align: top; /* Align containers at the top */
+      margin-right: 50px; /* Add margin between containers */
+      padding-top: 60px;
+      padding-left: 30px;
+
+    }
+
+    .pomodoroTimer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0; /* Reset margin */
+      padding: 0; /* Reset padding */
+      margin-left: 100px;
+      padding-top: 100px;
+    }
+
+   
+    
+    .pomodoroWrapper {
+      display: flex; /* Use flexbox to arrange containers */
+    }
+
+    .timerButtons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; /* Adjust as needed */
+    }
+
+    .timerLengths {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; /* Adjust as needed */
+      margin-bottom: 0px;
+    }
+
+    #work, #longBreak, #shortBreak, #start, #pause {
+      background-color: beige;
+      border: black;
+      font-family: "josefin-sans", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      padding: 15px;
+      border-radius: 30px;
+
+    }
+
+    .bookArrow {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .bookArrow img {
+      margin-right: 20px; /* Add space between the image and the paragraph */
+      width: 100px;
+      margin-left: 100px;
+      margin-top: 0;
     }
