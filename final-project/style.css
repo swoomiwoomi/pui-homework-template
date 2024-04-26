@@ -62,6 +62,7 @@ p {
     text-align: center;
     font-size: 30px;
     padding-top: 100px;
+    padding-bottom: 80px;
 
 
 }
@@ -162,6 +163,10 @@ p {
       font-family: "josefin-sans", sans-serif;
       font-weight: 300;
       font-style: normal;
+      outline: 1px solid #000;
+      border-radius: 50px;
+      height: 500px;
+      padding-top: 0;
     }
 
     .tomatoBook img {
@@ -217,7 +222,7 @@ p {
       display: flex;
       justify-content: center;
       margin-top: 20px; /* Adjust as needed */
-      margin-bottom: 0px;
+      margin-bottom: 10px;
     }
 
     #work, #longBreak, #shortBreak, #start, #pause {
