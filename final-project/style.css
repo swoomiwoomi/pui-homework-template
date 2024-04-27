@@ -1,4 +1,6 @@
-
+body {
+  background-color: #E0F2FF !important; /* Specify your desired background color */
+}
 
 /* Add your existing CSS styles here */
 Header .Header {
@@ -82,7 +84,7 @@ p {
 
 .TaskInputQuestion {
     font-family: "josefin-sans", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-style: normal;
     text-align: center;
     font-size: 30px;
@@ -98,7 +100,7 @@ p {
     border: 1px solid #aaa;
     border-radius: 5px;
     width: 510px;
-    height: 35px;
+    height: 40px;
     margin: 0 auto;
     padding-bottom: 10px;
     border-radius: 30px;
@@ -117,7 +119,7 @@ p {
     font-size: medium;
     padding: 0px;
     width: 508px;
-    height: 33px;
+    height: 38px;
     margin: 0 auto;
     border-radius: 30px;
     margin-left: -10px;
@@ -201,6 +203,7 @@ p {
       outline: 1px solid #000;
       border-radius: 50px;
       height: 500px;
+      width: 700px;
       padding-top: 0;
     }
 
@@ -208,6 +211,11 @@ p {
       width: 160px;
       height: auto;
       padding-bottom: 0px;
+      border: 1px solid #000;
+    }
+
+    .bookArrow {
+      border: none;
     }
 
     .tomatoBook p {
@@ -265,7 +273,7 @@ p {
 
     #work, #longBreak, #shortBreak, #start, #pause {
       background-color: #fff7ec;
-      border: black;
+      border: 1px solid #000;
       font-family: "josefin-sans", sans-serif;
       font-weight: 700;
       font-style: normal;
