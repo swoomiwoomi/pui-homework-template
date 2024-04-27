@@ -1,8 +1,8 @@
 body {
-  background-color: #E0F2FF !important; /* Specify your desired background color */
+  background-color: #E0F2FF !important; 
 }
 
-/* Add your existing CSS styles here */
+
 Header .Header {
     font-size: 60px;
     padding-top: 60px;
@@ -17,8 +17,8 @@ Header .Header {
 
 .Header img {
   width: 100px;
-  margin-top: -10px; /* Adjust the margin to move the image up */
-  padding-top: 0; /* You can remove padding-top if it's not needed */
+  margin-top: -10px; 
+  padding-top: 0; 
 }
 
 p {
@@ -42,7 +42,7 @@ p {
 }
 
 .Header a:hover {
-  color: black; /* Change text color to blue on hover */
+  color: black;
   text-decoration: none;
 }
 
@@ -128,7 +128,7 @@ p {
   }
   
   .empty-line {
-    height: 30px; /* Adjust this value to increase or decrease the space between divs */
+    height: 30px; 
   }
 
   .addMore {
@@ -138,10 +138,10 @@ p {
     text-decoration: underline;
     border: none;
     background-color: transparent;
-    bottom: 10px; /* Adjust this value to position the button vertically */
-    left: 50%; /* Aligns the button horizontally to the center */
+    bottom: 10px; 
+    left: 50%; 
     display: block;
-    margin: 20px auto; /* Centers the buttons horizontally */
+    margin: 20px auto; 
   }
 
   #send-button {
@@ -154,7 +154,7 @@ p {
     border-radius: 20px;
     align-items: center;
     display: block;
-    margin: 20px auto; /* Centers the buttons horizontally */
+    margin: 20px auto; 
     font-family: "josefin-sans", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -171,28 +171,28 @@ p {
     font-style: normal;
     text-align: left;
     font-size: 30px;
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none; 
     padding-left: 50px;
     padding-bottom: 0px;
     
   }
 
-    /* CSS for styling the checkboxes */
+   
     .task {
-        margin-bottom: 10px; /* Add spacing between tasks */
+        margin-bottom: 10px; 
     }
 
-    /* Style for the checkbox input */
+    
     .task-checkbox {
-        margin-right: 10px; /* Add spacing between checkbox and label */
+        margin-right: 10px;
 
     }
 
-    /* Style for the label associated with the checkbox */
+    
     .task label {
-        font-size: 16px; /* Adjust font size */
-        display: inline-block; /* Ensure label and checkbox are displayed inline */
-        vertical-align: middle; /* Align label vertically with checkbox */
+        font-size: 16px;
+        display: inline-block; 
+        vertical-align: middle; 
     }
 
     .timer {
@@ -220,7 +220,7 @@ p {
 
     .tomatoBook p {
 
-      margin: -50px; /* Remove default margin of the paragraph */
+      margin: -50px;
     }
 
     .textContainer {
@@ -229,10 +229,10 @@ p {
     }
 
     .pomodoroInfo, .pomodoroTimer {
-      width: 600px; /* Set the width of each container */
-      height: 300px; /* Set the height of each container */
-      vertical-align: top; /* Align containers at the top */
-      margin-right: 100px; /* Add margin between containers */
+      width: 600px;
+      height: 300px; 
+      vertical-align: top; 
+      margin-right: 100px; 
       padding-top: 60px;
       padding-left: 30px;
 
@@ -243,8 +243,8 @@ p {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin: 0; /* Reset margin */
-      padding: 0; /* Reset padding */
+      margin: 0; 
+      padding: 0; 
       margin-left: 100px;
       padding-top: 100px;
     }
@@ -255,19 +255,19 @@ p {
    
     
     .pomodoroWrapper {
-      display: flex; /* Use flexbox to arrange containers */
+      display: flex;
     }
 
     .timerButtons {
       display: flex;
       justify-content: center;
-      margin-top: 20px; /* Adjust as needed */
+      margin-top: 20px; 
     }
 
     .timerLengths {
       display: flex;
       justify-content: center;
-      margin-top: 20px; /* Adjust as needed */
+      margin-top: 20px; 
       margin-bottom: 10px;
     }
 
@@ -289,7 +289,7 @@ p {
     }
 
     .bookArrow img {
-      margin-right: 20px; /* Add space between the image and the paragraph */
+      margin-right: 20px;
       width: 100px;
       margin-left: 100px;
       margin-top: 0;
@@ -312,7 +312,7 @@ p {
 
   #videoContainer {
     position: relative;
-    width: auto; /* Adjust the width as needed */
+    width: auto; 
     height: auto;
 
   }
@@ -325,9 +325,8 @@ p {
     height: 315;
   }
 
-/* Responsive Styles for 390x844 */
+
 @media (max-width: 1024px) {
-  /* Adjustments for smaller screens */
   Header .Header {
     font-size: px;
     
@@ -384,7 +383,7 @@ p {
   }
 
   .pomodoroWrapper {
-    display: flex; /* Use flexbox to arrange containers */
+    display: flex; 
     flex-direction: column;
     padding-left: 110px;
   }
@@ -394,12 +393,8 @@ p {
     padding-bottom: 600px;
   }
   
-  
- 
-  /* Add more responsive adjustments here */
 }
 
 @media (max-height:1366px) {
-  /* Adjustments for screens with height <= 844px */
-  /* You can add specific adjustments for this height if needed */
+ 
 }
