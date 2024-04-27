@@ -168,9 +168,10 @@ p {
     font-weight: 600;
     font-style: normal;
     text-align: left;
-    font-size: medium;
+    font-size: 30px;
     list-style-type: none; /* Remove bullet points */
     padding-left: 50px;
+    padding-bottom: 0px;
     
   }
 
@@ -339,7 +340,7 @@ p {
   }
 
   .TaskInputQuestion {
-    font-size: 18px;
+    font-size: 30px;
   }
 
   .TaskInput {
