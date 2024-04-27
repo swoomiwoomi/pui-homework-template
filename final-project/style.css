@@ -102,6 +102,7 @@ p {
     margin: 0 auto;
     padding-bottom: 10px;
     border-radius: 30px;
+    background-color: #689dd6;
   }
   
   [id*="user-input"] {
@@ -316,10 +317,10 @@ p {
   }
 
 /* Responsive Styles for 390x844 */
-@media (max-width: 390px) {
+@media (max-width: 1024px) {
   /* Adjustments for smaller screens */
   Header .Header {
-    font-size: 30px;
+    font-size: px;
     
 }
 
@@ -327,25 +328,69 @@ p {
   .NavBar {
     display: flex;
     flex-direction: column;
-    padding-top: 90px;
+    padding-right:px;
+    font-size: 2px;
   }
 
   
   
   .Header img {
-      width: 60px;
+      width: 100px;
   }
 
   .TaskInputQuestion {
     font-size: 18px;
   }
 
+  .TaskInput {
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-radius: 30px;
+  }
+  
+  [id*="user-input"] {
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    resize: none; 
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    border-radius: 30px;
+    font-size: medium;
+    padding: 0px;
+    width: 298px;
+    height: 33px;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-left: -10px;
+    margin-top: -10px;
+
+  }
+
+  .pomodoroWrapper {
+    display: flex; /* Use flexbox to arrange containers */
+    flex-direction: column;
+    padding-left: 110px;
+  }
+
+  .pomodoroInfo {
+    margin-left: 50px;
+    padding-bottom: 600px;
+  }
+  
   
  
   /* Add more responsive adjustments here */
 }
 
-@media (max-height: 844px) {
+@media (max-height:1366px) {
   /* Adjustments for screens with height <= 844px */
   /* You can add specific adjustments for this height if needed */
 }
